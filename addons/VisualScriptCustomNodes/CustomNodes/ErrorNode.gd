@@ -7,12 +7,12 @@ func _set_error_condition(value):
 	error_condition = value
 	ports_changed_notify()
 
-enum _reactions {_breakpoint, _print, _print_debug, _print_error, _dont_print}
-export (_reactions) var reaction := 0 setget _set_reaction
+export (int, "breakpoint", "print", "print_debug", "print_error", "dont_print") var reaction := 0 setget _set_reaction
 func _set_reaction(value):
 	reaction = value
 	ports_changed_notify()
 	#property_list_changed_notify()
+
 
 export (int, 1, 10) var input_count := 1 setget _set_input_count
 func _set_input_count(value):
@@ -46,7 +46,7 @@ func _get_output_sequence_port_text(idx):
 			return "done"
 
 func _get_input_value_port_count():
-	return input_count
+	return input_count + 1
 
 func _get_input_value_port_name(idx):
 	if idx == 0:
@@ -96,7 +96,7 @@ func _step(inputs, outputs, start_mode, working_mem):
 		match reaction:
 			0:
 				printerr(outputs[0])
-				return outputs[0]
+				return "breakpoint reached: " + outputs[0]
 			1:
 				print(outputs[0])
 			2:
