@@ -25,7 +25,7 @@ func _get_category():
 	return "flow_control"
 
 func _get_caption():
-	return "check error"
+	return "Check Error"
 
 func _has_input_sequence_port():
 	return true

@@ -22,11 +22,7 @@ func _get_category():
 	return "data"
 
 func _get_caption():
-	return "Get mouse pos"
-
-func _get_text():
-	return "text"
-
+	return "Get Mouse Position"
 
 func _get_input_value_port_count():
 	return 1
@@ -37,6 +33,11 @@ func _get_input_value_port_name(idx):
 func _get_input_value_port_type(idx):
 	TYPE_OBJECT
 
+func _get_input_value_port_hint(idx):
+	return PROPERTY_HINT_RESOURCE_TYPE
+
+func _get_input_value_port_hint_string(idx):
+	return "Node"
 
 func _get_output_value_port_count():
 	return 1
@@ -44,11 +45,11 @@ func _get_output_value_port_count():
 func _get_output_value_port_name(idx):
 	match relative:
 		0:
-			return "g_pos"
+			return "glob_pos"
 		1:
-			return "l_pos"
+			return "local_pos"
 		2:
-			return "vp_pos"
+			return "view_pos"
 
 func _get_output_value_port_type(idx):
 	return TYPE_VECTOR2
