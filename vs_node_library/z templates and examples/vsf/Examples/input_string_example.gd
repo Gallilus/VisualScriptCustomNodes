@@ -14,5 +14,5 @@ func _init():
 			{"name":"string_PLACEHOLDER_TEXT", "type":TYPE_STRING, "hint":PROPERTY_HINT_PLACEHOLDER_TEXT, "hint_string":"try save before pressing file clear"},
 			]
 
-func _custom_function(a,b,c,d,e,f,g,h,i):
+func _custom_function(_a,_b,_c,_d,_e,_f,_g,_h,_i):
 	pass

@@ -51,5 +51,5 @@ func _init():
 			# add value example
 			]
 
-func _custom_function(a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,a1,b1,c1,d1,e1,f1):
+func _custom_function(_a,_b,_c,_d,_e,_f,_g,_h,_i,_j,_k,_l,_m,_n,_o,_p,_q,_r,_s,_t,_u,_v,_w,_x,_y,_z,_a1,_b1,_c1,_d1,_e1,_f1):
 	pass

@@ -25,7 +25,7 @@ func _get_caption():
 func _get_output_value_port_count():
 	return 1
 
-func _get_output_value_port_name(idx):
+func _get_output_value_port_name(_idx):
 	return constants_print[_constant_names]
 
 func _get_output_value_port_type(_idx):

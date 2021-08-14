@@ -15,5 +15,5 @@ func _init():
 			{"name":"int_LAYERS_3D_RENDER", "value": 1, "hint":PROPERTY_HINT_LAYERS_3D_RENDER},
 			]
 
-func _custom_function(a,b,c,d,e,f,g,h,i,j):
+func _custom_function(_a,_b,_c,_d,_e,_f,_g,_h,_i,_j):
 	pass

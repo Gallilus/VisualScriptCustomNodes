@@ -10,5 +10,5 @@ func _init():
 			{"name":"float_EXP_EASING", "value": 1.5, "hint":PROPERTY_HINT_EXP_EASING, "hint_string":"inout"},
 			]
 
-func _custom_function(a,b,c,d,e):
+func _custom_function(_a,_b,_c,_d,_e):
 	pass

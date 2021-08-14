@@ -55,32 +55,32 @@ func _get_caption():
 func _get_input_value_port_count():
 	return 1
 
-func _get_input_value_port_name(idx):
+func _get_input_value_port_name(_idx):
 	return "self"
 
-func _get_input_value_port_type(idx):
-	TYPE_OBJECT
+func _get_input_value_port_type(_idx):
+	return TYPE_OBJECT
 
 func _get_output_value_port_count():
 	return 1
 
-func _get_output_value_port_hint(idx):
+func _get_output_value_port_hint(_idx):
 	return PROPERTY_HINT_RESOURCE_TYPE
 
-func _get_output_value_port_hint_string(idx):
+func _get_output_value_port_hint_string(_idx):
 	if _instance:
 		return _instance.get_class()
 
-func _get_output_value_port_name(idx):
+func _get_output_value_port_name(_idx):
 	if valid:
 		return autoload
 	else:
 		return "config error"
 
-func _get_output_value_port_type(idx):
+func _get_output_value_port_type(_idx):
 	return TYPE_OBJECT
 
-func _step(inputs, outputs, start_mode, working_mem):
+func _step(inputs, outputs, _start_mode, _working_mem):
 	if !inputs[0]:
 		return "Input[0] not connected to self"
 	if !valid:

@@ -34,19 +34,19 @@ func _get_output_sequence_port_text(idx):
 func _get_input_value_port_count():
 	return input_count
 
-func _get_input_value_port_name(idx):
+func _get_input_value_port_name(_idx):
 	return "%s"
 
 func _get_output_value_port_count():
 	return 1
 
-func _get_output_value_port_name(idx):
+func _get_output_value_port_name(_idx):
 	return "error_str"
 
-func _get_output_value_port_type(idx):
+func _get_output_value_port_type(_idx):
 	return TYPE_STRING
 
-func _step(inputs, outputs, start_mode, working_mem):
+func _step(inputs, outputs, start_mode, _working_mem):
 	if not start_mode == START_MODE_BEGIN_SEQUENCE:
 		return 1
 	
