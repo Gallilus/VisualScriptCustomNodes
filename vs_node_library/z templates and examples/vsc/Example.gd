@@ -100,7 +100,6 @@ func _get_output_value_port_type(idx):
 		1:
 			return TYPE_INT
 
-
 func _step(_inputs, outputs, start_mode, _working_mem):
 	if not start_mode == START_MODE_BEGIN_SEQUENCE:
 		return 1
@@ -110,4 +109,4 @@ func _step(_inputs, outputs, start_mode, _working_mem):
 	outputs[0] = RigidBody.new()
 	outputs[1] = 10
 	
-	return 0 | STEP_PUSH_STACK_BIT
+	return 0
