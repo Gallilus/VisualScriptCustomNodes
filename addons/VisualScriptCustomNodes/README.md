@@ -1,21 +1,27 @@
 VisualScriptCustomNodes
 ===
 [github](https://github.com/Gallilus/VisualScriptCustomNodes), [issues](https://github.com/Gallilus/VisualScriptCustomNodes/issues)
+
+# Description
+
 A Library of visualscriptnodes to extend Godot VisualScript
+10+ new nodes in 5 categories.
+multiple examples of how to create your own nodes.
+2 new class of VisualScriptCustomNode to implement easier node creation
  
-## Getting started
+# Getting started
 
 Drag a node from the library in to a VisualScript
 
-### Examples
+## Examples
 
 In 'res://vs_node_library/z templates and examples/' you  may find examples for VisualScriptCustomNode (vsc) and VisualScriptCustomFunc (vsf)
 These are there to help you create your own.
 
-### Contribute
+## Contribute
 If you want to contribute your work to this library simple post your script and maybe a small demo project of its implementation on the GitHub [issues](https://github.com/Gallilus/VisualScriptCustomNodes/issues) page.
 
-### Creating a new custom node
+## Creating a new custom node
 1. Custom Node
     [GODOT DOCS](https://docs.godotengine.org/en/stable/getting_started/scripting/visual_script/custom_visualscript_nodes.html#creating-a-custom-node)
     From Godot3.4 you will be able to overwrite,
@@ -61,9 +67,9 @@ If you want to contribute your work to this library simple post your script and 
 3. Drag this script in your VisualScript
 Alternatively you are able to create a `VisualScriptCustomNode` and assign the script to it.
 
-## advanced users
+# advanced users
 
-### _input_clues and _output_clues
+## _input_clues and _output_clues
 Just like in other scripts you would like to expose more details about your variable to the editor so that the editor in return will help you specifie that information.
 
 Therefore `VisualScriptCustomFunc` has two arrays `_input_clues` `_output_clues` which you may populate on `_init()` wit property dictionary’s to help the editor, colleagues read the intent.
@@ -98,16 +104,21 @@ When you have a function that is not returning any value it will be best to defa
 
 Please do not overwrite `VisualScriptCustomNode` functions.
 
-## Known issues
+# Known issues
 
-property dictionary’s not able to get `name`, `value` from function definition.
+`VisualScriptConstant`
+- Will run singlton actions like `Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)` on the ditor.
+    - Running the function in editor is overkill it is the only way to automaticly get full output information
 
-## Appendix and FAQ
+`VisualScriptCustomFunc`
+- Property dictionary’s not able to get `name`, `value` from function definition.
+
+# Appendix and FAQ
 :::info
 **Want to contribute to the library?** Leave a comment on the GitHub [issues](https://github.com/Gallilus/VisualScriptCustomNodes/issues)
 :::
 
-## Other Links
+# Other Links
 [youtube](https://www.youtube.com/channel/UC01q_FIsQgEs2Lil0qtgpPA)
 [itch.io](https://gallilus.itch.io/visualscript-customnodes)
 [patreon](https://www.patreon.com/Gallilus)
