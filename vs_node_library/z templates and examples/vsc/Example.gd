@@ -3,8 +3,9 @@ extends VisualScriptCustomNode
 
 #export var sequenced := false setget set_sequenced
 #func set_sequenced(value):
-#	sequenced = value
-#	ports_changed_notify()
+#	if not sequenced == value:
+#		sequenced = value
+#		ports_changed_notify()
 #func _has_input_sequence_port():
 #	return sequenced
 #func _get_output_sequence_port_count():
