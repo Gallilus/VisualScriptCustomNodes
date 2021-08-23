@@ -46,11 +46,17 @@ func _get_output_value_port_name(_idx):
 func _get_output_value_port_type(_idx):
 	return TYPE_STRING
 
-func _step(inputs, outputs, start_mode, _working_mem):
+func _get_working_memory_size():
+	return 1
+
+func _step(inputs, outputs, start_mode, working_mem):
 	if not start_mode == START_MODE_BEGIN_SEQUENCE:
+		outputs[0] = working_mem[0]
 		return 1
 	
 	outputs[0] = print_string.format(inputs,"%s")
+	
+	working_mem[0] = outputs[0]
 	
 	match reaction:
 		0:
